@@ -22,10 +22,12 @@ function App() {
    
   return (
     <div className='main-container'>
-      <h2>TIPOUT CALC</h2>
+      {/* <h1>TIPOUT CALC</h1> */}
 
       <div className="top-half">
+
         <form>
+      <h2>tips info:</h2>
           <div className='form-group'>
             <label>Total tips: </label>
             <input  type="text" name="total" value={total} placeholder={total} onChange={(e) => setTotal(e.target.value)} />
@@ -58,14 +60,31 @@ function App() {
 
 
       <div className="results">
-        <p>Host 1 takes <span className="result">${tipsHostOne.toFixed(0)}</span></p><br />
-        <p>Host 2 takes <span className="result">${tipsHostTwo.toFixed(0)}</span></p><br />
-        <p>Host 3 takes <span className="result">${tipsHostThree.toFixed(0)}</span></p><br />
+      <h2>tipout totals:</h2>
+
+        <div className="result-line">
+          <h4>Host 1 takes </h4><span className="result">${tipsHostOne.toFixed(0)}</span>
+        </div>
+        <div className="result-line">
+          <h4>Host 2 takes </h4><span className="result">${tipsHostTwo.toFixed(0)}</span>
+        </div>
+        <div className="result-line">
+          <h4>Host 3 takes </h4><span className="result">${tipsHostThree.toFixed(0)}</span>
+        </div>
+        <br />
         <hr /> <br />
-        <p>Full point takes: <span className="result">${full.toFixed(0)}</span></p><br />
-        <p>0.5 point takes: <span className='result'>${p5.toFixed(0)}</span></p><br />
-        <p>0.75 point takes: <span className='result'>${p75.toFixed(0)}</span></p><br />
-        <p>0.375 point takes: <span className='result'>${p375.toFixed(0)}</span></p>
+        <div className="result-line">
+          <h4>Full point takes: </h4> <span className="result">${full.toFixed(0)}</span>
+        </div>
+        <div className="result-line">
+          <h4>0.5 point takes: </h4> <span className='result'>${p5.toFixed(0)}</span>
+        </div>
+        <div className="result-line">
+          <h4>0.75 point takes: </h4> <span className='result'>${p75.toFixed(0)}</span>
+        </div>
+        <div className="result-line">
+          <h4>0.375 point takes: </h4> <span className='result'>${p375.toFixed(0)}</span>
+        </div>
       </div>
 
 
