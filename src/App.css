@@ -17,7 +17,6 @@ body {
 .main-container {
   max-width: 500px;
   min-width: 375px;
-  padding: 25px;
   width:75%;
   margin: auto;
   border: 2px solid #ccc;
