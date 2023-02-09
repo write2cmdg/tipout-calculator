@@ -1,38 +1,66 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #123;
+  color: #edc;
+  font-size: 1.2rem;
+  padding: 5%;
+  line-height: 1.5rem;
+}
+
+.main-container {
+  max-width: 500px;
+  min-width: 375px;
+  padding: 50px;
+  width:50%;
+  margin: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+form, .totals, .results {
+  padding: 10%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 1rem;
+
+}
+
+
+label {
+  padding: 5px;
+}
+
+h2 {
   text-align: center;
+  margin-bottom: 25px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input {
+  border-radius: 8px;
+  background: #223;
+  color: #ccc;
+  text-align: right;
+  width: 75px;
+  height: 1rem;
+  padding:10px;
+  font-size: 1.5rem;
+  font-weight:700;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.result {
+  margin-left: 10px;
+  color:#Fac;
+  font-size: 1.5rem;
+  font-weight:700;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
