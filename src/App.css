@@ -24,7 +24,7 @@ body {
 }
 
 form, .totals, .results {
-  padding: 10%;
+  padding: 5%;
   border: 2px solid #ccc;
   border-radius: 10px;
   margin: 1rem;
@@ -74,8 +74,10 @@ input {
 }
 
 .small {
+
   text-align: center;
   font-size: .3rem;
+  margin-top: 25px;
 }
 
 .small a {
