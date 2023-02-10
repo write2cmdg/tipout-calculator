@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const BackgroundAnimation = () => {
@@ -6,7 +5,7 @@ const BackgroundAnimation = () => {
 
   useEffect(() => {
     setAnimationId(Math.floor(Math.random() * 100));
-  }, []);
+  }, [animationId]);
 
   return (
     <div style={styles.container}>
@@ -16,11 +15,12 @@ const BackgroundAnimation = () => {
           style={{
             ...styles.shape,
             animationName: `shapeAnimation-${animationId}`,
-            width: `${Math.random() * 200 + 50}px`,
-            height: `${Math.random() * 200 + 50}px`,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDuration: `${Math.random() + 0.5}s`,
+            width: `${Math.random() * 500 + 5}px`,
+            height: `${Math.random() * 500 + 5}px`,
+            left: `${Math.random() * 100 - 10}%`,
+            top: `${Math.random() * 100 - 10}%`,
+            animationDuration: `${Math.random() + .75}s`,
+            borderColor: randomColor(),
           }}
         />
       ))}
@@ -45,7 +45,7 @@ const styles = {
   shape: {
     position: 'absolute',
     border: '4px solid currentColor',
-    animation: 'shapeAnimation 2s linear infinite',
+    animation: 'shapeAnimation 5s linear infinite',
   },
 };
 
@@ -59,11 +59,9 @@ for (let i = 0; i < 100; i++) {
     `@keyframes shapeAnimation-${i} {
       0% {
         transform: scale(0);
-        border-color: ${randomColor()};
       }
       100% {
         transform: scale(1);
-        border-color: ${randomColor()};
       }
     }`
   );

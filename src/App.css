@@ -10,7 +10,7 @@
 body {
   background-color: #123;
   color: #edc;
-  font-size: 1.2rem;
+  font-size: 1rem;
   /* padding: 1%; */
   line-height: 1.5rem;
   width: 100vw;
@@ -23,11 +23,12 @@ body {
 
 .main-container {
   z-index: 10;
+  width: 90vw;
+  min-width: 300px;
   max-width: 500px;
-  min-width: 375px;
-  width:90%;
   border: 2px solid #ccc;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 form, .totals, .results {
