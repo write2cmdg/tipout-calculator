@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import BackgroundAnimation from './components/BackgroundAnimations';
+import CurrentTime from './components/CurrentTime';
 
 function App() {
   let [total, setTotal] = useState();
@@ -28,6 +29,7 @@ function App() {
       <div className='main-container'>
         <div className="top-half">
           <div> <BackgroundAnimation /></div>
+          <div><CurrentTime /></div>
           <form>
             <h2>tips info:</h2>
             <div className='form-group'>
