@@ -18,6 +18,7 @@ body {
 }
 
 .main-container {
+  z-index: 10;
   max-width: 500px;
   min-width: 375px;
   width:75%;
@@ -37,6 +38,7 @@ form, .totals, .results {
 
 .animated-background {
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -44,7 +46,6 @@ form, .totals, .results {
 }
 
 .circle {
-  z-index: -1;
   position: absolute;
   border-radius: 50%;
   opacity: 0;
