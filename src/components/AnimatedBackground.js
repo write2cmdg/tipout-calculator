@@ -5,9 +5,9 @@ const AnimatedBackground = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const x = Math.floor(Math.random() * 100);
-      const y = Math.floor(Math.random() * 100);
-      const size = Math.floor(Math.random() * 100 + 50);
+      const x = Math.floor(Math.random() * 50);
+      const y = Math.floor(Math.random() * 50);
+      const size = Math.floor(Math.random() * 500 + 50);
       const color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 
       setCircles([...circles, { x, y, size, color }]);
