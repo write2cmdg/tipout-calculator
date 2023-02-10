@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   let [total, setTotal] = useState(0.00);
@@ -30,23 +31,23 @@ function App() {
         <form>
       <h2>tips info:</h2>
           <div className='form-group'>
-            <label>Total tips: </label>
+            <h4>Total tips: </h4>
             <input  type="text" name="total" value={total} placeholder={total} onChange={(e) => setTotal(e.target.value)} />
           </div>
           <div className='form-group'>
-            <label>Total points: </label>
+            <h4>Total points: </h4>
             <input  type="text" name="points" value={points} placeholder={points} onChange={(e) => setPoints(e.target.value)} />
           </div>
           <div className='form-group'>
-            <label>Hours Host 1: </label>
+            <h4>Hours Host 1: </h4>
             <input  type="text" name="hostOneHours" value={hostOneHours} placeholder={hostOneHours} onChange={(e) => setHostOneHours(e.target.value)} />
           </div>
           <div className='form-group'>
-            <label>Hours Host 2: </label>
+            <h4>Hours Host 2: </h4>
             <input  type="text" name="hostTwoHours" value={hostTwoHours} placeholder={hostTwoHours} onChange={(e) => setHostTwoHours(e.target.value)} />
           </div>
           <div className='form-group'>
-            <label>Hours Host 3: </label>
+            <h4>Hours Host 3: </h4>
             <input type="text" name="hostThreeHours" value={hostThreeHours} placeholder={hostThreeHours} onChange={(e) => setHostThreeHours(e.target.value)} />
           </div>
         
@@ -88,6 +89,8 @@ function App() {
         </div>
       <div className="small">If you had a great shift and want to buy me a coffee click <a href="https://account.venmo.com/u/Cristian-DiGrandi">HERE</a>. Thanks!!</div>
       </div>
+        
+      <div><AnimatedBackground /></div>
     </div>
   );
 }
