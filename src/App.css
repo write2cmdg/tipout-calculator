@@ -21,11 +21,13 @@ body {
   align-items: center;
 }
 
-.main-container {
+.container {
+  display: flex;
+  flex-direction: column;
   z-index: 10;
   width: 90vw;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 1250px;
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -74,11 +76,15 @@ input {
 
 .result {
   margin-left: 10px;
-  /* color:#1CA152; */
-  color:#008529;
+  color:#1CA152;
+  /* color:#008529; */
   font-size: 1.5rem;
   font-weight:700;
 
+}
+
+.toggle {
+  display: none;
 }
 
 .result-line {
@@ -105,4 +111,90 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.line {
+  display:block;
+}
+
+
+
+@media (min-width: 850px) {
+
+  
+  body {
+    font-size: 1.25rem;
+  }
+  
+  .result, input {
+    font-size: 1.5rem;
+  }
+
+  input {
+    width: 100px;
+    height: 35px;
+  }
+  
+  .line {
+    display:none;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  form, .results {
+
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+
+  .container {
+    padding: 50px;
+    min-width: 850px;
+  }
+
+  .small {
+    font-size: .75rem;
+  }
+  
+  .small a {
+    font-size: 1rem;
+  }
+  
+  .toggle {
+    display: block;
+  }
+  
+}
+
+@media (min-width: 1100px) {
+
+
+  form, .results {
+
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+
+  body {
+    font-size: 1.5rem;
+  }
+  
+  .result, input {
+    font-size: 1.75rem;
+  }
 }

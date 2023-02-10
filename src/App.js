@@ -23,75 +23,73 @@ function App() {
   
   return (
     
-    <div className='main-container'>
-      <div> <BackgroundAnimation /></div>
-      {/* <h1>TIPOUT CALC</h1> */}
-
-      <div className="top-half">
-
-        <form>
-      <h2>tips info:</h2>
-          <div className='form-group'>
-            <h4>Total tips: </h4>
-            <input  type="text" name="total" value={total} placeholder={'$0.00'} onChange={(e) => setTotal(e.target.value)} />
+    <div className="container">
+      <h1 className='toggle' >Daddies tipout calculator</h1>
+      <div className='main-container'>
+        <div className="top-half">
+          <div> <BackgroundAnimation /></div>
+          <form>
+            <h2>tips info:</h2>
+            <div className='form-group'>
+              <h4>Total tips: </h4>
+              <input  type="text" name="total" value={total} placeholder={'$0.00'} onChange={(e) => setTotal(e.target.value)} />
+            </div>
+            <div className='form-group'>
+              <h4>Total points: </h4>
+              <input  type="text" name="points" value={points} placeholder={points} onChange={(e) => setPoints(e.target.value)} />
+            </div>
+            <div className='form-group'>
+              <h4>Hours Host 1: </h4>
+              <input  type="text" name="hostOneHours" value={hostOneHours} placeholder={hostOneHours} onChange={(e) => setHostOneHours(e.target.value)} />
+            </div>
+            <div className='form-group'>
+              <h4>Hours Host 2: </h4>
+              <input  type="text" name="hostTwoHours" value={hostTwoHours} placeholder={hostTwoHours} onChange={(e) => setHostTwoHours(e.target.value)} />
+            </div>
+            <div className='form-group'>
+              <h4>Hours Host 3: </h4>
+              <input type="text" name="hostThreeHours" value={hostThreeHours} placeholder={hostThreeHours} onChange={(e) => setHostThreeHours(e.target.value)} />
+            </div>
+      
+          </form>
+        </div>
+        <div className="results">
+          <h2>tipout totals:</h2>
+          <div className="result-line">
+            <h4>Host 1 takes </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(0)}</span>
           </div>
-          <div className='form-group'>
-            <h4>Total points: </h4>
-            <input  type="text" name="points" value={points} placeholder={points} onChange={(e) => setPoints(e.target.value)} />
+          <div className="result-line">
+            <h4>Host 2 takes </h4><span className="result">${!tipsHostTwo ? '0' : tipsHostTwo.toFixed(0)}</span>
           </div>
-          <div className='form-group'>
-            <h4>Hours Host 1: </h4>
-            <input  type="text" name="hostOneHours" value={hostOneHours} placeholder={hostOneHours} onChange={(e) => setHostOneHours(e.target.value)} />
+          <div className="result-line">
+            <h4>Host 3 takes </h4><span className="result">${!tipsHostThree ? '0' : tipsHostThree.toFixed(0)}</span>
           </div>
-          <div className='form-group'>
-            <h4>Hours Host 2: </h4>
-            <input  type="text" name="hostTwoHours" value={hostTwoHours} placeholder={hostTwoHours} onChange={(e) => setHostTwoHours(e.target.value)} />
+          <br />
+          <div className="line">
+            <hr />
+            <br />
           </div>
-          <div className='form-group'>
-            <h4>Hours Host 3: </h4>
-            <input type="text" name="hostThreeHours" value={hostThreeHours} placeholder={hostThreeHours} onChange={(e) => setHostThreeHours(e.target.value)} />
+          <div className="result-line">
+            <h4>Full point takes: </h4> <span className="result">${!full ? '0' : full.toFixed(0)}</span>
           </div>
-        
-        </form>
-
+          <div className="result-line">
+            <h4>0.5 point takes: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(0)}</span>
+          </div>
+          <div className="result-line">
+            <h4>0.75 point takes: </h4> <span className='result'>${!p75 ? '0' : p75.toFixed(0)}</span>
+          </div>
+          <div className="result-line">
+            <h4>0.375 point takes: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(0)}</span>
+          </div>
+        </div>
       </div>
-
-
-      <div className="results">
-      <h2>tipout totals:</h2>
-
-        <div className="result-line">
-          <h4>Host 1 takes </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(0)}</span>
-        </div>
-        <div className="result-line">
-          <h4>Host 2 takes </h4><span className="result">${!tipsHostTwo ? '0' : tipsHostTwo.toFixed(0)}</span>
-        </div>
-        <div className="result-line">
-          <h4>Host 3 takes </h4><span className="result">${!tipsHostThree ? '0' : tipsHostThree.toFixed(0)}</span>
-        </div>
-        <br />
-        <hr /> <br />
-        <div className="result-line">
-          <h4>Full point takes: </h4> <span className="result">${!full ? '0' : full.toFixed(0)}</span>
-        </div>
-        <div className="result-line">
-          <h4>0.5 point takes: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(0)}</span>
-        </div>
-        <div className="result-line">
-          <h4>0.75 point takes: </h4> <span className='result'>${!p75 ? '0' : p75.toFixed(0)}</span>
-        </div>
-        <div className="result-line">
-          <h4>0.375 point takes: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(0)}</span>
-        </div>
-      </div>
-
       <footer>
         <div className="small">
           <a href="mailto:write2cmdg+daddiestipoutcalc@gmail.com">Contact Me</a>
         </div>
         <div className="small">If you had a great shift and want to buy me a coffee click <a href="https://account.venmo.com/u/Cristian-DiGrandi">HERE</a>. Thanks!!</div>
       </footer>
-        
+      
     </div>
   );
 }
