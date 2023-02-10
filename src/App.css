@@ -69,7 +69,8 @@ input {
 
 .result {
   margin-left: 10px;
-  color:#Fff;
+  /* color:#1CA152; */
+  color:#008529;
   font-size: 1.5rem;
   font-weight:700;
 
@@ -93,4 +94,10 @@ input {
   text-transform: uppercase;
   font-size: .5rem;
   font-weight: 700;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

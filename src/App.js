@@ -83,9 +83,14 @@ function App() {
         <div className="result-line">
           <h4>0.375 point takes: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(0)}</span>
         </div>
-      <div className="small">If you had a great shift and want to buy me a coffee click <a href="https://account.venmo.com/u/Cristian-DiGrandi">HERE</a>. Thanks!!</div>
       </div>
 
+      <footer>
+        <div className="small">
+          <a href="mailto:write2cmdg+daddiestipoutcalc@gmail.com">Contact Me</a>
+        </div>
+        <div className="small">If you had a great shift and want to buy me a coffee click <a href="https://account.venmo.com/u/Cristian-DiGrandi">HERE</a>. Thanks!!</div>
+      </footer>
         
     </div>
   );
