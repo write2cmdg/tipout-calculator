@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import BackgroundAnimation from './components/BackgroundAnimations';
 
 function App() {
   let [total, setTotal] = useState();
@@ -23,7 +24,7 @@ function App() {
   return (
     
     <div className='main-container'>
-      {/* <div><AnimatedBackground /></div> */}
+      <div> <BackgroundAnimation /></div>
       {/* <h1>TIPOUT CALC</h1> */}
 
       <div className="top-half">
@@ -52,12 +53,7 @@ function App() {
           </div>
         
         </form>
-        {/* <div className="totals">
-          <p>Total hosts' tips: ${hostsTips.toFixed(0)}</p>
-          <p>Sub Total: ${sub.toFixed(0)}</p>
-          <p>Hosts' total Hours: {hostsTotalHours}</p>
-          <p>Hosts' tips per Hours: ${hostsTipsPerHour.toFixed(0)}</p>
-        </div> */}
+
       </div>
 
 
