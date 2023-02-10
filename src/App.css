@@ -119,7 +119,7 @@ footer {
 
 
 
-@media (min-width: 750px) {
+@media (min-width: 700px) {
 
   
   body {
@@ -159,7 +159,7 @@ footer {
 
   .container {
     padding: 50px;
-    min-width: 850px;
+    min-width: 800px;
   }
 
   .small {
