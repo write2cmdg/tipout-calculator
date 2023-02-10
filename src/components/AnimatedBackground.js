@@ -11,7 +11,7 @@ const AnimatedBackground = () => {
       const color = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 
       setCircles([...circles, { x, y, size, color }]);
-    }, 500);
+    }, 250);
 
     return () => clearInterval(interval);
   }, [circles]);

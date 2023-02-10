@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import AnimatedBackground from './components/AnimatedBackground';
+// import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   let [total, setTotal] = useState(0.00);
@@ -20,10 +20,11 @@ function App() {
   let tipsHostOne = hostsTipsPerHour * hostOneHours
   let tipsHostTwo = hostsTipsPerHour * hostTwoHours
   let tipsHostThree = hostsTipsPerHour * hostThreeHours
-   
+  
   return (
-
+    
     <div className='main-container'>
+      {/* <div><AnimatedBackground /></div> */}
       {/* <h1>TIPOUT CALC</h1> */}
 
       <div className="top-half">
@@ -90,7 +91,6 @@ function App() {
       <div className="small">If you had a great shift and want to buy me a coffee click <a href="https://account.venmo.com/u/Cristian-DiGrandi">HERE</a>. Thanks!!</div>
       </div>
         
-      <div><AnimatedBackground /></div>
     </div>
   );
 }
