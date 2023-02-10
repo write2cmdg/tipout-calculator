@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-// import AnimatedBackground from './components/AnimatedBackground';
 
 function App() {
   let [total, setTotal] = useState(0.00);
@@ -90,6 +89,7 @@ function App() {
         </div>
       <div className="small">If you had a great shift and want to buy me a coffee click <a href="https://account.venmo.com/u/Cristian-DiGrandi">HERE</a>. Thanks!!</div>
       </div>
+
         
     </div>
   );
