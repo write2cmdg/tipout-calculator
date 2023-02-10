@@ -9,18 +9,19 @@ const BackgroundAnimation = () => {
 
   return (
     <div style={styles.container}>
-      {Array.from({ length: 20 }, (_, i) => (
+      {Array.from({ length: 75 }, (_, i) => (
         <div
           key={i}
           style={{
             ...styles.shape,
             animationName: `shapeAnimation-${animationId}`,
-            width: `${Math.random() * 500 + 5}px`,
-            height: `${Math.random() * 500 + 5}px`,
-            left: `${Math.random() * 100 - 10}%`,
-            top: `${Math.random() * 100 - 10}%`,
-            animationDuration: `${Math.random() + .75}s`,
+            width: `${Math.random() * 500 + 1}px`,
+            height: `${Math.random() * 500 + 1}px`,
+            left: `${Math.random() * 100 - 20}%`,
+            top: `${Math.random() * 100 - 20}%`,
+            animationDuration: `${Math.random() + 2}s`,
             borderColor: randomColor(),
+            opacity: 0.9,
           }}
         />
       ))}
@@ -44,7 +45,7 @@ const styles = {
   },
   shape: {
     position: 'absolute',
-    border: '4px solid currentColor',
+    border: '1px solid currentColor',
     animation: 'shapeAnimation 5s linear infinite',
   },
 };
