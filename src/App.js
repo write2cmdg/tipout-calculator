@@ -25,11 +25,11 @@ function App() {
   return (
     
     <div className="container">
+          <div><CurrentTime /></div>
       <h1 className='toggle' >Daddies tipout calculator</h1>
       <div className='main-container'>
         <div className="top-half">
           <div> <BackgroundAnimation /></div>
-          <div><CurrentTime /></div>
           <form>
             <h2>tips info:</h2>
             <div className='form-group'>
