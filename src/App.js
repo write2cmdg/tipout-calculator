@@ -55,7 +55,7 @@ function App() {
               <h4>Bar: </h4>
               <div>
                 <input className="radio" type="radio" name="bar" value={0.03} onChange={(e) => setIsBar(e.target.value)} /> yes &nbsp;
-                <input className="radio" type="radio" name="bar" value={0} onChange={(e) => setIsBar(e.target.value)} /> no
+                <input className="radio" type="radio" name="bar" value={0} onChange={(e) => setIsBar(e.target.value)} checked /> no
               </div>
             </div>
       
