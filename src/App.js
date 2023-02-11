@@ -8,19 +8,22 @@ function App() {
   let [points, setPoints] = useState(6.375);
   let [hostOneHours, setHostOneHours] = useState(6);
   let [hostTwoHours, setHostTwoHours] = useState(4);
-  let [hostThreeHours, setHostThreeHours] = useState(0);
+  let [isBar, setIsBar] = useState(0);
+
 
   let hostsTips = total * 0.05
-  let sub = total - hostsTips
-  let hostsTotalHours = Number(hostOneHours) + Number(hostTwoHours) + Number(hostThreeHours)
+  let barTips = total * isBar
+
+  let sub = total - (hostsTips + barTips)
+  let hostsTotalHours = Number(hostOneHours) + Number(hostTwoHours)
   let hostsTipsPerHour = hostsTips / hostsTotalHours
   let full = sub / points
   let p5 = full / 2
   let p75 = p5 * 1.5
   let p375 = p75 / 2
+  let p25 = p75 / 4
   let tipsHostOne = hostsTipsPerHour * hostOneHours
   let tipsHostTwo = hostsTipsPerHour * hostTwoHours
-  let tipsHostThree = hostsTipsPerHour * hostThreeHours
   
   return (
     
@@ -49,8 +52,9 @@ function App() {
               <input  type="text" name="hostTwoHours" value={hostTwoHours} placeholder={hostTwoHours} onChange={(e) => setHostTwoHours(e.target.value)} />
             </div>
             <div className='form-group'>
-              <h4>Hours Host 3: </h4>
-              <input type="text" name="hostThreeHours" value={hostThreeHours} placeholder={hostThreeHours} onChange={(e) => setHostThreeHours(e.target.value)} />
+              <h4>Bar </h4>
+              <input type="radio" name="bar" value={0.03} onChange={(e) => setIsBar(e.target.value)} />Yes
+              <input type="radio" name="bar" value={0} onChange={(e) => setIsBar(e.target.value)} />No
             </div>
       
           </form>
@@ -64,7 +68,7 @@ function App() {
             <h4>Host 2 takes </h4><span className="result">${!tipsHostTwo ? '0' : tipsHostTwo.toFixed(0)}</span>
           </div>
           <div className="result-line">
-            <h4>Host 3 takes </h4><span className="result">${!tipsHostThree ? '0' : tipsHostThree.toFixed(0)}</span>
+            <h4>Bar </h4><span className="result">${!barTips ? '0' : barTips.toFixed(0)}</span>
           </div>
           <br />
           <div className="line">
@@ -75,13 +79,16 @@ function App() {
             <h4>Full point takes: </h4> <span className="result">${!full ? '0' : full.toFixed(0)}</span>
           </div>
           <div className="result-line">
-            <h4>0.5 point takes: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(0)}</span>
-          </div>
-          <div className="result-line">
             <h4>0.75 point takes: </h4> <span className='result'>${!p75 ? '0' : p75.toFixed(0)}</span>
           </div>
           <div className="result-line">
+            <h4>0.5 point takes: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(0)}</span>
+          </div>
+          <div className="result-line">
             <h4>0.375 point takes: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(0)}</span>
+          </div>
+          <div className="result-line">
+            <h4>0.25 point takes: </h4> <span className='result'>${!p25 ? '0' : p25.toFixed(0)}</span>
           </div>
         </div>
       </div>
