@@ -55,11 +55,7 @@ h2, h1 {
 h4 {
   color: #999;
 }
-.form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 input {
   margin: 2px;
   border: none;
@@ -124,7 +120,17 @@ footer {
   font-size: .6rem;
 }
 
+.form-group, .radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+
+.radio {
+  margin: 0;
+  width: 1rem;
+}
 
 @media (min-width: 700px) {
 
@@ -135,6 +141,11 @@ footer {
   
   .result, input {
     font-size: 1.5rem;
+  }
+
+  .radio {
+    margin: 0;
+    width: 1.5rem;
   }
 
   input {
@@ -203,5 +214,10 @@ footer {
   
   .result, input {
     font-size: 1.75rem;
+  }
+
+  .radio {
+    margin: 0;
+    width: 1.75rem;
   }
 }

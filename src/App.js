@@ -29,7 +29,7 @@ function App() {
     
     <div className="container">
           <div><CurrentTime /></div>
-      <h1 className='toggle' >Daddies tipout calculator</h1>
+      <h1 className='toggle' >Tipout calculator</h1>
       <div className='main-container'>
         <div className="top-half">
           <div> <BackgroundAnimation /></div>
@@ -51,10 +51,12 @@ function App() {
               <h4>Hours Host 2: </h4>
               <input  type="text" name="hostTwoHours" value={hostTwoHours} placeholder={hostTwoHours} onChange={(e) => setHostTwoHours(e.target.value)} />
             </div>
-            <div className='form-group'>
-              <h4>Bar </h4>
-              <input type="radio" name="bar" value={0.03} onChange={(e) => setIsBar(e.target.value)} />Yes
-              <input type="radio" name="bar" value={0} onChange={(e) => setIsBar(e.target.value)} />No
+            <div className='radio-group'>
+              <h4>Bar: </h4>
+              <div>
+                <input className="radio" type="radio" name="bar" value={0.03} onChange={(e) => setIsBar(e.target.value)} /> yes &nbsp;
+                <input className="radio" type="radio" name="bar" value={0} onChange={(e) => setIsBar(e.target.value)} /> no
+              </div>
             </div>
       
           </form>
