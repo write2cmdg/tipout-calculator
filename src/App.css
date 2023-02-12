@@ -59,7 +59,7 @@ input {
   -ms-user-select: text; /* IE 10+ */
   user-select: text; /* Standard syntax */
   margin: 2px;
-  /* border: none; */
+  border: none;
   background: #444;
   color: #ccc;
   text-align: right;
