@@ -11,11 +11,8 @@ body {
   background-color: #123;
   color: #edc;
   font-size: 1rem;
-  /* padding: 1%; */
-  line-height: 1.5rem;
   width: 100vw;
   height: 100vh;
-  /* overflow: hidden; */
   display:flex;
   justify-content: center;
   align-items: center;
