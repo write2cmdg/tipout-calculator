@@ -16,7 +16,7 @@ body {
   height: 100vh;
   display:flex;
   justify-content: center;
-  align-items: center;
+  padding: 1rem;
 }
 
 .container {
@@ -31,7 +31,11 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-form, .totals, .results {
+.main-container {
+  gap: 1rem;
+}
+
+form, .results {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 5%;
   border: 2px solid #ccc;
@@ -160,6 +164,8 @@ footer {
   }
 
   .main-container {
+
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -207,6 +213,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    vertical-align: top;
     
   }
 

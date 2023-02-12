@@ -28,8 +28,12 @@ function App() {
   return (
     
     <div className="container">
-          <div><CurrentTime /></div>
-      <h1 className='toggle' >Tipout calculator</h1>
+
+      <div className="form-group">
+        <h1 className='toggle' >Tipout calculator</h1>
+        <CurrentTime />
+      </div>
+
       <div className='main-container'>
         <div className="top-half">
           <div> <BackgroundAnimation /></div>
