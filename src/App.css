@@ -1,9 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style: none;
-  text-transform: uppercase;
+  /* text-decoration: none;
+  list-style: none; */
+  /* text-transform: uppercase; */
   box-sizing: border-box;
 }
 
@@ -58,9 +58,8 @@ input {
   -moz-user-select: text; /* Firefox 2+ */
   -ms-user-select: text; /* IE 10+ */
   user-select: text; /* Standard syntax */
-  margin: 2px;
+  /* margin: 2px;
   border: none;
-  border-radius: 8px;
   background: #444;
   color: #ccc;
   text-align: right;
@@ -69,7 +68,8 @@ input {
   padding:10px;
   font-size: 1.25rem;
   font-weight:700;
-  font-family: Arial;
+  font-family: Arial; */
+  border-radius: 8px;
 }
 
 .result {
