@@ -54,6 +54,10 @@ h4 {
 }
 
 input {
+  -webkit-user-select: text; /* Chrome, Opera, Safari */
+  -moz-user-select: text; /* Firefox 2+ */
+  -ms-user-select: text; /* IE 10+ */
+  user-select: text; /* Standard syntax */
   margin: 2px;
   border: none;
   border-radius: 8px;
