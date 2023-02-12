@@ -60,12 +60,15 @@ input {
   margin: 2px;
   border: none;
   border-radius: 8px;
+  background: #444;
+  color: #ccc;
   text-align: right;
   width: 75px;
   height: 1rem;
   padding:10px;
   font-size: 1.25rem;
   font-weight:700;
+  font-family: Arial;
 }
 
 .result {
