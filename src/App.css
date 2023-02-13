@@ -195,6 +195,9 @@ footer {
   .container {
     padding: 50px;
     min-width: 800px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+
   }
 
   .small {
