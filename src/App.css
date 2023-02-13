@@ -41,7 +41,15 @@ form, .results {
   border: 2px solid #ccc;
   border-radius: 10px;
   margin: 1rem;
+  
+}
 
+form {
+  margin-top: 0;
+}
+
+.results {
+  margin-bottom: 0;
 }
 
 label {
@@ -100,7 +108,7 @@ input {
 
   text-align: center;
   font-size: .3rem;
-  margin-top: 25px;
+  margin: 1rem auto;
 }
 
 .small a {
@@ -112,8 +120,9 @@ input {
 
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
 .line {
@@ -141,6 +150,14 @@ footer {
 }
 
 @media (min-width: 700px) {
+
+  form {
+    margin: 1rem;
+  }
+  
+  .results {
+    margin: 1rem;
+  }
 
   .time {
 
