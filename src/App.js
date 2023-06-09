@@ -21,7 +21,7 @@ function App() {
   let p5 = full / 2
   let p75 = p5 * 1.5
   let p375 = p75 / 2
-  let p25 = p75 / 4
+  let p25 = full / 4
   let tipsHostOne = hostsTipsPerHour * hostOneHours
   let tipsHostTwo = hostsTipsPerHour * hostTwoHours
   
