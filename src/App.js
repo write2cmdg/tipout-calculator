@@ -68,13 +68,13 @@ function App() {
         <div className="results">
           <h2>tipout totals:</h2>
           <div className="result-line">
-            <h4>Host 1: </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(0)}</span>
+            <h4>Host 1: </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>Host 2: </h4><span className="result">${!tipsHostTwo ? '0' : tipsHostTwo.toFixed(0)}</span>
+            <h4>Host 2: </h4><span className="result">${!tipsHostTwo ? '0' : tipsHostTwo.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>Bar: </h4><span className="result">${!barTips ? '0' : barTips.toFixed(0)}</span>
+            <h4>Bar: </h4><span className="result">${!barTips ? '0' : barTips.toFixed(2)}</span>
           </div>
           <br />
           <div className="line">
@@ -82,19 +82,19 @@ function App() {
             <br />
           </div>
           <div className="result-line">
-            <h4>Full point: </h4> <span className="result">${!full ? '0' : full.toFixed(0)}</span>
+            <h4>Full point: </h4> <span className="result">${!full ? '0' : full.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>0.75 point: </h4> <span className='result'>${!p75 ? '0' : p75.toFixed(0)}</span>
+            <h4>0.75 point: </h4> <span className='result'>${!p75 ? '0' : p75.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>0.5 point: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(0)}</span>
+            <h4>0.5 point: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>0.375 point: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(0)}</span>
+            <h4>0.375 point: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>0.25 point: </h4> <span className='result'>${!p25 ? '0' : p25.toFixed(0)}</span>
+            <h4>0.25 point: </h4> <span className='result'>${!p25 ? '0' : p25.toFixed(2)}</span>
           </div>
         </div>
       </div>
