@@ -48,7 +48,6 @@ function App() {
               <input  type="text" name="points" value={points} placeholder={points} onChange={(e) => setPoints(e.target.value)} />
             </div>
             
-            </div>
       
           </form>
         </div>
