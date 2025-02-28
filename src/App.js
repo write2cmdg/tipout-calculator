@@ -47,20 +47,7 @@ function App() {
               <h4>Total points: </h4>
               <input  type="text" name="points" value={points} placeholder={points} onChange={(e) => setPoints(e.target.value)} />
             </div>
-            <div className='form-group'>
-              <h4>Hours Host 1: </h4>
-              <input  type="text" name="hostOneHours" value={hostOneHours} placeholder={hostOneHours} onChange={(e) => setHostOneHours(e.target.value)} />
-            </div>
-            <div className='form-group'>
-              <h4>Hours Host 2: </h4>
-              <input  type="text" name="hostTwoHours" value={hostTwoHours} placeholder={hostTwoHours} onChange={(e) => setHostTwoHours(e.target.value)} />
-            </div>
-            <div className='radio-group'>
-              <h4>Bar: </h4>
-              <div>
-                <input className="radio" type="radio" name="bar" value={0.03} onChange={(e) => setIsBar(e.target.value)} /> yes &nbsp;
-                <input className="radio" type="radio" name="bar" value={0} onChange={(e) => setIsBar(e.target.value)} /> no
-              </div>
+            
             </div>
       
           </form>
@@ -68,13 +55,7 @@ function App() {
         <div className="results">
           <h2>tipout totals:</h2>
           <div className="result-line">
-            <h4>Host 1: </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(2)}</span>
-          </div>
-          <div className="result-line">
-            <h4>Host 2: </h4><span className="result">${!tipsHostTwo ? '0' : tipsHostTwo.toFixed(2)}</span>
-          </div>
-          <div className="result-line">
-            <h4>Bar: </h4><span className="result">${!barTips ? '0' : barTips.toFixed(2)}</span>
+            <h4>Host: </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(2)}</span>
           </div>
           <br />
           <div className="line">
