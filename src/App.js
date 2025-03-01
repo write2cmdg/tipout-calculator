@@ -6,6 +6,7 @@ import CurrentTime from "./components/CurrentTime";
 function App() {
   let [total, setTotal] = useState("");
   let [points, setPoints] = useState(3.5);
+  let [includeHost, setIncludeHost] = useState(true);
 
   let handleTotalChange = (e) => {
     let value = e.target.value.replace(/\D/g, "");
@@ -18,7 +19,7 @@ function App() {
   };
 
   let totalAmount = Number(total);
-  let hostsTips = totalAmount * 0.05;
+  let hostsTips = includeHost ? totalAmount * 0.05 : 0;
   let sub = totalAmount - hostsTips;
   let full = points > 0 ? sub / Number(points) : 0;
   let p5 = full / 2;
@@ -61,14 +62,26 @@ function App() {
                 }
               />
             </div>
+            <div className="form-group">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={includeHost}
+                  onChange={() => setIncludeHost(!includeHost)}
+                />
+                Include Host Tip (5%)
+              </label>
+            </div>
           </form>
         </div>
         <div className="results">
           <h2>Tipout Totals:</h2>
-          <div className="result-line">
-            <h4>Host:</h4>
-            <span className="result">${isNaN(hostsTips) ? "0.00" : hostsTips.toFixed(2)}</span>
-          </div>
+          {includeHost && (
+            <div className="result-line">
+              <h4>Host:</h4>
+              <span className="result">${isNaN(hostsTips) ? "0.00" : hostsTips.toFixed(2)}</span>
+            </div>
+          )}
           <br />
           <div className="line">
             <hr />
