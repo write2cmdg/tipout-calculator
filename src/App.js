@@ -1,60 +1,73 @@
-import { useState } from 'react';
-import './App.css';
-import BackgroundAnimation from './components/BackgroundAnimations';
-import CurrentTime from './components/CurrentTime';
+import { useState } from "react";
+import "./App.css";
+import BackgroundAnimation from "./components/BackgroundAnimations";
+import CurrentTime from "./components/CurrentTime";
 
 function App() {
-  let [total, setTotal] = useState();
-  let [points, setPoints] = useState(6.375);
-  let [hostOneHours, setHostOneHours] = useState(6);
-  let [hostTwoHours, setHostTwoHours] = useState(4);
-  let [isBar, setIsBar] = useState(0);
+  let [total, setTotal] = useState("");
+  let [points, setPoints] = useState(3.5);
 
+  let handleTotalChange = (e) => {
+    let value = e.target.value.replace(/\D/g, "");
+    if (value === "") {
+      setTotal("");
+      return;
+    }
+    let formattedValue = (Number(value) / 100).toFixed(2);
+    setTotal(formattedValue);
+  };
 
-  let hostsTips = total * 0.05
-  let barTips = total * isBar
+  let totalAmount = Number(total);
+  let hostsTips = totalAmount * 0.05;
+  let sub = totalAmount - hostsTips;
+  let full = points > 0 ? sub / Number(points) : 0;
+  let p5 = full / 2;
+  let p75 = p5 * 1.5;
+  let p25 = full / 4;
 
-  let sub = total - (hostsTips + barTips)
-  let hostsTotalHours = Number(hostOneHours) + Number(hostTwoHours)
-  let hostsTipsPerHour = hostsTips / hostsTotalHours
-  let full = sub / points
-  let p5 = full / 2
-  let p75 = p5 * 1.5
-  let p375 = p75 / 2
-  let p25 = full / 4
-  let tipsHostOne = hostsTipsPerHour * hostOneHours
-  let tipsHostTwo = hostsTipsPerHour * hostTwoHours
-  
   return (
-    
     <div className="container">
-
       <div className="form-group">
-        <h1 className='toggle' >Tipout calculator</h1>
+        <h1 className="toggle">Tipout Calculator</h1>
         <CurrentTime />
       </div>
 
-      <div className='main-container'>
+      <div className="main-container">
         <div className="top-half">
-          <div> <BackgroundAnimation /></div>
+          <div>
+            <BackgroundAnimation />
+          </div>
           <form>
-            <h2>tips info:</h2>
-            <div className='form-group'>
-              <h4>Total tips: </h4>
-              <input  type="text" name="total" value={total} placeholder={'$0.00'} onChange={(e) => setTotal(e.target.value)} />
+            <h2>Tips Info:</h2>
+            <div className="form-group">
+              <h4>Total Tips:</h4>
+              <input
+                type="text"
+                name="total"
+                value={total}
+                placeholder={"$0.00"}
+                onChange={handleTotalChange}
+              />
             </div>
-            <div className='form-group'>
-              <h4>Total points: </h4>
-              <input  type="text" name="points" value={points} placeholder={points} onChange={(e) => setPoints(e.target.value)} />
+            <div className="form-group">
+              <h4>Total Points:</h4>
+              <input
+                type="text"
+                name="points"
+                value={points}
+                placeholder={points}
+                onChange={(e) =>
+                  setPoints(e.target.value === "" ? "" : Number(e.target.value))
+                }
+              />
             </div>
-            
-      
           </form>
         </div>
         <div className="results">
-          <h2>tipout totals:</h2>
+          <h2>Tipout Totals:</h2>
           <div className="result-line">
-            <h4>Host: </h4><span className="result">{hostsTips.toFixed(2)}</span>
+            <h4>Host:</h4>
+            <span className="result">${isNaN(hostsTips) ? "0.00" : hostsTips.toFixed(2)}</span>
           </div>
           <br />
           <div className="line">
@@ -62,28 +75,25 @@ function App() {
             <br />
           </div>
           <div className="result-line">
-            <h4>Full point: </h4> <span className="result">${!full ? '0' : full.toFixed(2)}</span>
+            <h4>Full Point:</h4>
+            <span className="result">${isNaN(full) ? "0.00" : full.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>0.75 point: </h4> <span className='result'>${!p75 ? '0' : p75.toFixed(2)}</span>
+            <h4>0.75 Point:</h4>
+            <span className="result">${isNaN(p75) ? "0.00" : p75.toFixed(2)}</span>
           </div>
           <div className="result-line">
-            <h4>0.5 point: </h4> <span className='result'>${!p5 ? '0' : p5.toFixed(2)}</span>
-          </div>
-          <div className="result-line">
-            <h4>0.375 point: </h4> <span className='result'>${!p375 ? '0' : p375.toFixed(2)}</span>
-          </div>
-          <div className="result-line">
-            <h4>0.25 point: </h4> <span className='result'>${!p25 ? '0' : p25.toFixed(2)}</span>
+            <h4>0.5 Point:</h4>
+            <span className="result">${isNaN(p5) ? "0.00" : p5.toFixed(2)}</span>
           </div>
         </div>
       </div>
+
       <footer>
         <div className="small">
           <a href="mailto:write2cmdg+daddiestipoutcalc@gmail.com">Contact Me</a>
         </div>
       </footer>
-      
     </div>
   );
 }
