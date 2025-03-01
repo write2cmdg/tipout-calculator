@@ -69,7 +69,7 @@ function App() {
                   checked={includeHost}
                   onChange={() => setIncludeHost(!includeHost)}
                 />
-                Include Host Tip (5%)
+                Include Host (5%)
               </label>
             </div>
           </form>
