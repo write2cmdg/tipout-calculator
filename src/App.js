@@ -54,7 +54,7 @@ function App() {
         <div className="results">
           <h2>tipout totals:</h2>
           <div className="result-line">
-            <h4>Host: </h4><span className="result">${!tipsHostOne ? '0' : tipsHostOne.toFixed(2)}</span>
+            <h4>Host: </h4><span className="result">{hostsTips.toFixed(2)}</span>
           </div>
           <br />
           <div className="line">
