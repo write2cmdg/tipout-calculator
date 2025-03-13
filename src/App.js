@@ -5,7 +5,7 @@ import CurrentTime from "./components/CurrentTime";
 
 function App() {
   let [total, setTotal] = useState("");
-  let [points, setPoints] = useState(3.5);
+  let [points, setPoints] = useState("3.50");
   let [includeHost, setIncludeHost] = useState(true);
 
   let handleTotalChange = (e) => {
@@ -18,10 +18,18 @@ function App() {
     setTotal(formattedValue);
   };
 
+  let handlePointsChange = (e) => {
+    let raw = e.target.value;
+    if (/^\d*\.?\d{0,2}$/.test(raw)) {
+      setPoints(raw);
+    }
+  };
+
   let totalAmount = Number(total);
+  let numericPoints = Number(points);
   let hostsTips = includeHost ? totalAmount * 0.05 : 0;
   let sub = totalAmount - hostsTips;
-  let full = points > 0 ? sub / Number(points) : 0;
+  let full = numericPoints > 0 ? sub / numericPoints : 0;
   let p5 = full / 2;
   let p75 = p5 * 1.5;
   let p25 = full / 4;
@@ -56,10 +64,8 @@ function App() {
                 type="text"
                 name="points"
                 value={points}
-                placeholder={points}
-                onChange={(e) =>
-                  setPoints(e.target.value === "" ? "" : Number(e.target.value))
-                }
+                placeholder="0.00"
+                onChange={handlePointsChange}
               />
             </div>
             <div className="form-group">
